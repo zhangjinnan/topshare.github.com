@@ -1,11 +1,11 @@
 
-http://username.github.io/archive.html
-http://username.github.io/atom.xml
-http://username.github.io/categories.html
-http://username.github.io/index.html
-http://username.github.io/pages.html
-http://username.github.io/rss.xml
-http://username.github.io/sitemap.txt
-http://username.github.io/tags.html
+http://www.prajnagarden.com/archive.html
+http://www.prajnagarden.com/atom.xml
+http://www.prajnagarden.com/categories.html
+http://www.prajnagarden.com/index.html
+http://www.prajnagarden.com/pages.html
+http://www.prajnagarden.com/rss.xml
+http://www.prajnagarden.com/sitemap.txt
+http://www.prajnagarden.com/tags.html
 
-http://username.github.io/lessons/2011/12/29/jekyll-introduction
+http://www.prajnagarden.com/2013/10/18/hello-world
