@@ -1,46 +1,27 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: 雪之痕，亦人生
+tagline: prajna
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+## 写在前面……
+那一年我们义无反顾的踏入了挨踢行业。看似光鲜的挨踢行业背后，是一不留神脑子就被驴给踢悲哀。
+作为魔都的工作的我，曾经一不留神北漂去了帝都，去了传说中的人寿不断降低的"中关村"。直接导致
+我半年之内撤离，在挨踢的这几年发现自己好像什么都没留下。最近我家宝宝即将降临，忍不住窃喜。
+于是乎，心头一热，拿起作为挨踢人的武器，写起博客来。
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+另一方面，最近OpenStack热火朝天，自己也在这个圈子里混了一段时间。也想着写点自己感兴趣的东西，
+积累和整理一些有用的东西。一直有朋友要写书，眼看着一直没发动，敝人有些忍不住，就拿起笔留下点
+什么，以便今后和大家一起交流学习。
 
-## Update Author Attributes
+## 生活点滴
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
+ 
+## OpenStack
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
 

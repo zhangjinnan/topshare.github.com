@@ -9,7 +9,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Prajna Is Wisdom
-tagline: Site Tagline
+tagline: prajna
 author :
   name : Kevin Zhang
   email : zhangjinnan87@gmail.com
@@ -81,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : prajna
     livefyre :
       site_id : 123
     intensedebate :
