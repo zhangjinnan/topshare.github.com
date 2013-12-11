@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ABOUT
-header: ABOUT
+title: 关于我
+header: 关于我
 group: navigation
 ---
 {% include JB/setup %}
