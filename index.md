@@ -15,13 +15,23 @@ tagline: prajna
 积累和整理一些有用的东西。一直有朋友要写书，眼看着一直没发动，敝人有些忍不住，就拿起笔留下点
 什么，以便今后和大家一起交流学习。
 
-## 生活点滴
+---
 
- 
 ## OpenStack
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+![OpenStack icon](image/openstack.jpg)
+    
+<ul>
+    {% for openstack_post in site.categories.openstack limit:3 %}
+      <li> {{ openstack_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ openstack_post.url }}">{{ openstack_post.title }}</a></li>
+    {% endfor %}
+</ul>
+
+---
+## 最新生活随笔
+<ul>
+  {% for life_post in site.categories.life limit:3 %}
+    <li> {{ life_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ life_post.url }}">{{ life_post.title }}</a></li>
   {% endfor %}
 </ul>
 
+---
