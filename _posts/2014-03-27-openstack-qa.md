@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OpenStack Q&A"
+title: "OpenStack QA"
 description: ""
 category: "openstack"
 tags: [openstack, error]

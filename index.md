@@ -16,15 +16,11 @@ tagline: prajna
 什么，以便今后和大家一起交流学习。
 
 ---
-
 ## OpenStack
 ![OpenStack icon](image/openstack.jpg)
-<ul>
-    {% for openstack_post in site.categories.openstack limit:3 %}
-      <li> {{ openstack_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ openstack_post.url }}">{{ openstack_post.title }}</a></li>
-    {% endfor %}
-</ul>
-
+{% for openstack_post in site.categories.openstack limit:3 %}
+<li> {{ openstack_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ openstack_post.url }}">{{ openstack_post.title }}</a></li>
+{% endfor %}
 ---
 ## 最新生活随笔
 <ul>
