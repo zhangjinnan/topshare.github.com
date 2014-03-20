@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "如何使keystone更有效率"
-description: ""
+description: "最近在做OpenStack Havana的测试，发现一些有关keystone方面的问题和调整的方法，顺便记录下来，以便自己今后查看。"
 category: "openstack"
 tags: [keystone, performance]
 ---

@@ -1,5 +1,6 @@
 <div class="page-header">
-	<h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
+	<h1>{{ page.title }} <small>{{ page.date | date_to_long_string }}</small></h1>
+	<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=10&amp;bgcolor=Grey&amp;ssc=false"></script>
 </div>
 
 <div class="row">
@@ -26,15 +27,25 @@
   </div>
   
   <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
-
+    <h4>RSS订阅</h4>
+<div><a href="/atom.xml"><img alt="rss feed" src="/assets/image/rss.png"></a></div>	
   {% unless page.tags == empty %}
-    <h4>Tags</h4>
+    <h4>文章标签</h4>
     <ul class="tag_box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
     </ul>
-  {% endunless %}  
+  {% endunless %}
+	<h4>相关文章</h4>
+    <ul>
+    {% for related_post in site.related_posts limit:5 %}
+        <li><a href="{{ BASE_PATH }}{{ related_post.url }}">{{ related_post.title }}</a></li>
+    {% endfor %}
+    </ul>
+	<h4>友情链接</h4>
+	<li><a href="http://trystack.cn/">trystack.cn</a></li>
+	<li><a href="http://tacy.github.io/">tacy</a></li>
+	<li><a href="http://liangbo.me/">liangbo</a></li>
+	<li><a href="http://blog.99cloud.net/">99cloud</a></li>
   </div>
 </div>

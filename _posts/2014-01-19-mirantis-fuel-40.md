@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mirantis Fuel 4.0"
-description: "Fuel guide for starter"
+description: "根据最新的Mirantis OpenStack整理了安装和使用手册，仅供大家参考！"
 category: "openstack"
 tags: [openstack, fuel]
 ---

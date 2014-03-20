@@ -10,7 +10,7 @@ pygments: true
 #
 title : Prajna Is Wisdom
 tagline: prajna
-author :
+author : Kevin Zhang
   name : Kevin Zhang
   email : zhangjinnan87@gmail.com
   github : topshare
@@ -99,7 +99,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-49507964-1'
     getclicky :
       site_id : 
     mixpanel :

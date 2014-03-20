@@ -68,4 +68,28 @@ body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+.signature {
+	font-size: 25px;
+	color: #9D9D9D;
+	#font-style:italic;
+}
+
+.signature_small {
+	font-size: 15px;
+	color: #9D9D9D;
+	font-style:italic;
+}	
+
+.openstack_url {
+	color: #0069d6;
+	font-size: 18px;
+	line-height: inherit;
+	font-weight: inherit;
+}
+
+.openstack_data {
+	font-size: 12px;
+	color: #9D9D9D;
+	font-style:italic;
+}	
