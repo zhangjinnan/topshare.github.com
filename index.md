@@ -18,7 +18,7 @@ tagline: prajna
 ---
 ## OpenStack
 ![OpenStack icon](image/openstack.jpg)
-{% for openstack_post in site.categories.openstack limit:3 %}
+{% for openstack_post in site.categories.openstack limit:8 %}
 <li> {{ openstack_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ openstack_post.url }}">{{ openstack_post.title }}</a></li>
 {% endfor %}
 ---
