@@ -2,8 +2,8 @@
 layout: post
 title: "OpenStack Q&A"
 description: ""
-category: "OpenStack"
-tags: [OpenStack,error]
+category: "openstack"
+tags: [openstack, error]
 ---
 {% include JB/setup %}
 
