@@ -2,8 +2,8 @@
 layout: post
 title: "OpenStack QA"
 description: "抽空整理的自己在使用OpenStack中的一些问题，分享出来，大家一起看看，如果有什么地方不对的还请指正。"
-category: "openstack"
-tags: [openstack, error]
+category: "OpenStack"
+tags: [OpenStack, QA]
 ---
 {% include JB/setup %}
 

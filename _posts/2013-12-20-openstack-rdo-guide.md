@@ -2,8 +2,8 @@
 layout: post
 title: "OpenStack RDO guide"
 description: "基于Redhat的RDO版本的安装，其实手工安装也不是很麻烦。初学者可以试着先RPM一个个装一下，有利于入门。"
-category: "openstack"
-tags: [openstack install, rdo]
+category: "OpenStack"
+tags: [OpenStack install, RDO]
 ---
 {% include JB/setup %}
 #OpenStack RDO
