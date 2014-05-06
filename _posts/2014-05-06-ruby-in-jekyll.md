@@ -267,12 +267,12 @@ done.
   Server running... press ctrl-c to stop.
 {% endhighlight %}
 
-##发个文章：
+##发个文章
 {% highlight sh %}
 [root@dev topshare.github.com]# rake post title="abc"
 Creating new post: ./_posts/2014-05-06-abc.md
 {% endhighlight %}
 根据markdown编辑2014-05-06-abc.md文件最后提交到github即可。
 
-##References:
+##References
 http://rvm.io/rubies/installing
