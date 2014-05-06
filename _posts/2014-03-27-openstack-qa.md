@@ -89,6 +89,18 @@ errno: File exists
 lrwxrwxrwx 1 root root 17 Mar 27 17:15 /usr/libexec/qemu-kvm -> /usr/bin/qemu-kvm
 {% endhighlight %}
 
+##windows镜像注入问题
+{% highlight sh %}
+[root@compute2 /data/nova/instances/0071e60b-a0b6-41fa-b484-ede5448d87b9]#guestmount -a disk -i --ro /mnt/
+guestmount: no operating system was found on this disk
+{% endhighlight %}
+未安装libguestfs-winsupport，需要安装libguestfs-winsupport。
+
+###处理方法
+{% highlight sh %}
+[root@compute2 /root] yum install libguestfs-winsupport
+{% endhighlight %}
+
 ---
 ##havana 2013.2.1 BUG
 ###UnboundLocalError: local variable 'instance_dir' when live migration
@@ -205,3 +217,6 @@ eval `ssh-agent |tee ~/.agent.env`
 ssh-add
 fi
 {% endhighlight %}
+
+##nova-manage service list出现多余的主机名，服务状态为XXX，如果删除
+通过清除nova数据库中的services表的binary字段对应的记录，（注意有外键约束，需要把services表和compute_nodes表的deleted字段都改为1)。
