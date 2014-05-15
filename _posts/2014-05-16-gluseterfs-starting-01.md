@@ -2,7 +2,7 @@
 layout: post
 title: "GLusterFS测试之入门"
 description: "今天花了点时间安装了一下GlusterFS，顺道简单的测试了一下GlusterFS的一些性能，并给出了一些自己的分析，如有不对的地方请GlusterFS大神指点。感谢weibo几个GlusterFS砖家拿砖头砸我的服务器，以便测试GlusterFS的高可用性。"
-category: "storage"
+category: "technique"
 tags: [GlusterFS, Storage, Testing]
 ---
 {% include JB/setup %}

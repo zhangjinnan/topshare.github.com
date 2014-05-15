@@ -7,7 +7,9 @@ group: navigation
 {% include JB/setup %}
 
 ###个人介绍
-IT工程师一枚，爱自由，爱开源。熟悉OpenStack各个组件的设计，熟悉虚拟化、存储、网络架构设计和应用。为国内多个企业级OpenStack私有云提供整体架构设计、企业高级特性开发和项目实施。有丰富的OpenStack项目经验，能解决OpenStack及其周边的各种问题。目前致力于解决OpenStack在企业私有云中的运营问题和针对企业级环境OpenStack高级特性的设计开发工作。
+国内第一批OpenStack企业级应用的尝鲜者，对OpenStack的各种特性和玩法了然于胸。热爱自由、热爱中华、热爱家人。
+
+如果你对OpenStack困惑可以联系我；如果你想用OpenStack赚钱可以联系我；如果想为OpenStack做点贡献可以联系我；如果你钱多的没地方花可以联系我；如果你想自己和OpenStack有关系可以联系我；只要你的需求里面有OpenStack你即可联系我。我能给你的是传道、授业、解惑，顺带赚奶粉钱有木有。
 
 ----
 
