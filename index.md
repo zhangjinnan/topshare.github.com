@@ -10,6 +10,7 @@ tagline: prajna
 OpenStack给我带来了全新的领域和全新的朋友，还记得当年满大街找做OpenStack的兄弟的时光。最后也就是寥寥几人，Intel的一波兄弟、新浪的一波（估计是我太渺小，始终为搭上线）、还有一波游兵散将（我也算一个吧）。搞了这么多年OpenStack后发现后起之秀很多，但那波老人到底还有多人个还奋斗在OpenStack的圈子里面，每每聊起来有一种伤感，酒不醉人人自醉。仅献给还在一线奋斗的OpenStack老人们，愿不远的将来OpenStack繁荣昌盛、遍地开花结果。Come on!
 
 ---
+
 ## OpenStack
 <table width="100%" rowspan="0" colspan="0">
 <tr>
@@ -30,6 +31,7 @@ OpenStack给我带来了全新的领域和全新的朋友，还记得当年满�
 </tr>
 </table>
 ---
+
 ## Technique
 <ul>
   {% for life_post in site.categories.technique limit:3 %}
