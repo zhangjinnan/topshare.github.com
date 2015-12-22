@@ -21,6 +21,7 @@ OpenStack给我带来了全新的领域和全新的朋友，还记得当年满�
 </br>
 {{openstack_post.description}}
 <div style="float:right;"><a href="{{ BASE_PATH }}{{ openstack_post.url }}">阅读全文</a></div>
+<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
 </hr>
 </div>
 {% endfor %}
