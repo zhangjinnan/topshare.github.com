@@ -1,0 +1,168 @@
+heat_template_version: 2015-10-15
+
+description: Animbus deployment training template
+
+parameters:
+  image:
+    type: string
+    description: OpenStack deploy image
+
+  flavor:
+    type: string
+    description: OpenStack deploy flavor
+
+  os_pub_net:
+    type: string
+    description: OpenStack public network
+
+  os_int_net:
+    type: string
+    description: OpenStack internal network for vxlan
+
+  os_volume_size:
+    type: string
+    description: OpenStack instance volume size
+
+resources:
+  os_pub_port1:
+    type: OS::Neutron::Port
+    properties:
+      name: os_pub_port1
+      network_id: { get_param: os_pub_net }
+      port_security_enabled: False
+
+  os_pub_port2:
+    type: OS::Neutron::Port
+    properties:
+      name: os_pub_port2
+      network_id: { get_param: os_pub_net }
+
+  os_pub_port3:
+    type: OS::Neutron::Port
+    properties:
+      name: os_pub_port3
+      network_id: { get_param: os_pub_net }
+
+  os_int_port1:
+    type: OS::Neutron::Port
+    properties:
+      name: os_int_port1
+      network_id: { get_resource: os_int_net }
+      port_security_enabled: False
+
+  os_int_port2:
+    type: OS::Neutron::Port
+    properties:
+      name: os_int_port2
+      network_id: { get_resource: os_int_net }
+      port_security_enabled: False
+
+  os_int_port3:
+    type: OS::Neutron::Port
+    properties:
+      name: os_int_port3
+      network_id: { get_resource: os_int_net }
+
+  os_ceph_volume1:
+    type: OS::Cinder::Volume
+    properties:
+      name: os_ceph_volume1_01
+      size: { get_resource: os_volume_size }
+
+  os_ceph_volume2:
+    type: OS::Cinder::Volume
+    properties:
+      name: os_ceph_volume2_01
+      size: { get_resource: os_volume_size }
+
+  os_ceph_volume3:
+    type: OS::Cinder::Volume
+    properties:
+      name: os_ceph_volume3_01
+      size: { get_resource: os_volume_size }
+
+  os_instance:
+    type: OS::Nova::Server
+    depends_on: [ os_pub_port1, os_int_port1 ]
+    properties:
+      name: os_server_01
+      image: { get_resource: image }
+      flavor: { get_resource: flavor } 
+      admin_user: root
+      admin_pass: openstack
+      networks: [ {port: { get_resource: os_pub_port1 } } , {port: { get_resource: os_int_port1 } } ]
+
+  training_instance2:
+    type: OS::Nova::Server
+    depends_on: [ public_port2, internal_port2 ]
+    properties:
+      name: instance2
+      image: test_deploy_image
+      flavor: 2C_6G_60GB
+      admin_user: root
+      admin_pass: openstack
+      networks: [ {port: { get_resource: public_port2 } } , {port: { get_resource: internal_port2 } } ]
+
+  training_instance3:
+    type: OS::Nova::Server
+    depends_on: [ public_port3, internal_port3 ]
+    properties:
+      name: instance3
+      image: test_deploy_image
+      flavor: 2C_6G_60GB
+      admin_user: root
+      admin_pass: openstack
+      networks: [ {port: { get_resource: public_port3 } } , {port: { get_resource: internal_port3 } } ]
+
+  volume_attachment1:
+    type: OS::Cinder::VolumeAttachment
+    depends_on: [ training_instance1, ceph_volume1 ]
+    properties:
+      volume_id: { get_resource: ceph_volume1 }
+      instance_uuid: { get_resource: training_instance1 }
+      mountpoint: /dev/vdb
+
+  volume_attachment2:
+    type: OS::Cinder::VolumeAttachment
+    depends_on: [ training_instance2, ceph_volume2 ]
+    properties:
+      volume_id: { get_resource: ceph_volume2 }
+      instance_uuid: { get_resource: training_instance2 }
+      mountpoint: /dev/vdb
+
+  volume_attachment3:
+    type: OS::Cinder::VolumeAttachment
+    depends_on: [ training_instance3, ceph_volume3 ]
+    properties:
+      volume_id: { get_resource: ceph_volume3 }
+      instance_uuid: { get_resource: training_instance3 }
+      mountpoint: /dev/vdb
+
+outputs:
+  instance1_public_ip:
+    description: Instance1 Public IP
+    value: { get_param: instance1_pub_ip }
+
+  instance1_internal_ip:
+    description: Instance1 Internal IP
+    value: { get_param: instance1_int_ip }
+
+  instance2_public_ip:
+    description: Instance2 Public IP
+    value: { get_param: instance2_pub_ip }
+
+  instance2_internal_ip:
+    description: Instance2 Internal IP
+    value: { get_param: instance2_int_ip }
+
+  instance3_public_ip:
+    description: Instance3 Public IP
+    value: { get_param: instance3_pub_ip }
+
+  instance3_internal_ip:
+    description: Instance3 Internal IP
+    value: { get_param: instance3_int_ip }
+
+  instance_login:
+    description: login user and password
+    value: root:openstack

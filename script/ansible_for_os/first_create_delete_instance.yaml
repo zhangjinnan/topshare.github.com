@@ -1,0 +1,14 @@
+- name: Deploy on OpenStack
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: ansible deploy instance
+      os_server:
+        #state: present
+        state: absent
+        name: ansibleServer
+        image: CentOS7
+        key_name: 99cloud-office
+        wait: yes
+        flavor: 1C_1G_80GB
+        network: k-net
