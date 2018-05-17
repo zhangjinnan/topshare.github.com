@@ -1,7 +1,0 @@
-parameters:
-  image: animbus_base_os
-  flavor: 2C_6G_60GB
-  os_int_net: k-net
-  os_pub_net: dev-net-214
-  os_volume_size: 80
-  num_instances: 6

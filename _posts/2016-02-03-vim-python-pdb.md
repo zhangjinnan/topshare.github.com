@@ -2,7 +2,7 @@
 layout: post
 title: "python开发工具和调试"
 description: "记录在python开发过程中使用的工具和调试手段。"
-category: "technique"
+category: "TC"
 tags: [Python]
 ---
 {% include JB/setup %}

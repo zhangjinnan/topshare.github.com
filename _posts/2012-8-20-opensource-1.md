@@ -2,7 +2,7 @@
 layout: post
 title: "坑爹的开源软件--第一篇"
 description: "开源软件一路走来的一些思考，坑不坑那是一种心态，如何运作开源软件。"
-category: "technique"
+category: "TC"
 tags: [opensource]
 ---
 {% include JB/setup %}

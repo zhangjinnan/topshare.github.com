@@ -1,5 +1,0 @@
-parameters:
-  key_name: 99cloud-office
-  image: 645a7ad5-d72a-44a3-bff9-deb1ad18ecd2
-  flavor: 5bac0510-c86e-4fbe-b876-5789f6240826
-  network: feafa128-6a88-4c48-a5c5-f33c7ce70b9b

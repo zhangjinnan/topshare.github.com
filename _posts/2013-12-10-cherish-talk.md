@@ -2,7 +2,7 @@
 layout: post
 title: "珍惜每一次于别人交流的机会"
 description: "交流是一种生活，在每次的交流的过程当中，自己的收获是最为丰富的。珍惜每次的交流。"
-category: "life"
+category: "Life"
 tags: [生活]
 ---
 {% include JB/setup %}

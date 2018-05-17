@@ -2,7 +2,7 @@
 layout: post
 title: "KVM一个物理节点到底能跑多少个VM"
 description: "今天有个兄弟打电话问我:'OpenStack要跑上W个虚拟机做测试，说心里没谱，到底能不能跑。'我当时就蒙,40台左右服务器跑1W个虚拟机，这个问题真心难倒我了，不知道该怎么回答。为了解答这个问题，晚上抽了个把小时在trystack上试了一把，仅供参考。"
-category: "openstack"
+category: "OpenStack"
 tags: [Openstack, Kvm, Testing, Trystack]
 ---
 {% include JB/setup %}

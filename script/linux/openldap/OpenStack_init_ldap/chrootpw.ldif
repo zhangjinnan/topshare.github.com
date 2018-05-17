@@ -1,7 +1,0 @@
-# specify the password generated above for "olcRootPW" section
- dn: olcDatabase={0}config,cn=config
-# By default passwd: admin
-# You can change it use slappasswd generate it.
-changetype: modify
-add: olcRootPW
-olcRootPW: {SSHA}C/HNqgSVybWMVujtbHg6DezkVNrFEVA6

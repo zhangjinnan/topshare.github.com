@@ -2,7 +2,7 @@
 layout: post
 title: "ruby in jekyll"
 description: "在用github page的使用用到jekyll，本身这个用ruby写的，就顺便学习一下ruby的一些东西，顺便记录下来，便于自己以后学习之用。"
-category: "Life"
+category: "TC"
 tags: [Ruby, Git]
 ---
 {% include JB/setup %}

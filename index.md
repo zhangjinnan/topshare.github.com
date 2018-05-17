@@ -10,19 +10,35 @@ tagline: prajna
 OpenStack给我带来了全新的领域和全新的朋友，还记得当年满大街找做OpenStack的兄弟的时光。最后也就是寥寥几人，Intel的一波兄弟、新浪的一波（估计是我太渺小，始终为搭上线）、还有一波游兵散将（我也算一个吧）。搞了这么多年OpenStack后发现后起之秀很多，但那波老人到底还有多人个还奋斗在OpenStack的圈子里面，每每聊起来有一种伤感，酒不醉人人自醉。仅献给还在一线奋斗的OpenStack老人们，愿不远的将来OpenStack繁荣昌盛、遍地开花结果。Come on!
 
 ---
+## 生活
+
+<ul>
+  {% for life_post in site.categories.Life limit:3 %}
+    <li> {{ life_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ life_post.url }}">{{ life_post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+---
+## 技术
+<ul>
+  {% for life_post in site.categories.TC limit:3 %}
+    <li> {{ life_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ life_post.url }}">{{ life_post.title }}</a></li>
+  {% endfor %}
+</ul>
+---
 
 ## OpenStack
 <table width="100%" rowspan="0" colspan="0">
 <tr>
 <td width="221px"><img src ="assets/image/openstack.jpg" alt="OpenStack"></td>
 <td>
-{% for openstack_post in site.categories.openstack limit:8 %}
-<div width="100%"><a href="{{ BASE_PATH }}{{ openstack_post.url }}" class="openstack_url">{{ openstack_post.title }}</br></a><span class="openstack_data">{{ openstack_post.date | date_to_string }} Kevin Zhang</span>
-</br>
+{% for openstack_post in site.categories.OpenStack limit:8 %}
+<div width="100%"><a href="{{ BASE_PATH }}{{ openstack_post.url }}" class="openstack_url">{{ openstack_post.title }}
+<br></a><span class="openstack_data">{{ openstack_post.date | date_to_string }} Kevin Zhang</span>
+<br>
 {{openstack_post.description}}
 <div style="float:right;"><a href="{{ BASE_PATH }}{{ openstack_post.url }}">阅读全文</a></div>
 <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
-</hr>
 </div>
 {% endfor %}
 <div style="width:50%;margin-left:auto;margin-right:auto;text-align:center;clear:both;">
@@ -33,20 +49,3 @@ OpenStack给我带来了全新的领域和全新的朋友，还记得当年满�
 </table>
 ---
 
-## 技术
-<ul>
-  {% for life_post in site.categories.technique limit:3 %}
-    <li> {{ life_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ life_post.url }}">{{ life_post.title }}</a></li>
-  {% endfor %}
-</ul>
----
-
-## 生活
-
-<ul>
-  {% for life_post in site.categories.life limit:3 %}
-    <li> {{ life_post.date | date_to_string }}&raquo; <a href="{{ BASE_PATH }}{{ life_post.url }}">{{ life_post.title }}</a></li>
-  {% endfor %}
-</ul>
-
----
