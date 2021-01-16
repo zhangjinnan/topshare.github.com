@@ -6,8 +6,8 @@ category: "OpenStack"
 tags: [OpenStack install, RDO]
 ---
 {% include JB/setup %}
-#OpenStack RDO
-##install use packstack
+# OpenStack RDO
+## install use packstack
 安装就简单给大家介绍了，不做深入分析，详情请友情参考沙克同学的博客。
 
 	[root@RDO-Test ~]# yum -y install openstack-packstack
@@ -16,13 +16,13 @@ tags: [OpenStack install, RDO]
 	
 
 
-##用RDO的RPM包手动安装
+## 用RDO的RPM包手动安装
 安装完centos6.5 min导入OpenStack的yum源，update系统
 	
 	[root@k-compute01 ~]# yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
 	[root@k-compute01 ~]# yum update
 
-###安装mysql
+### 安装mysql
 	[root@k-controller01 ~]# yum install mysql-server
 	启动mysql服务：
 	[root@k-controller01 ~]# /etc/init.d/mysqld start
@@ -33,7 +33,7 @@ tags: [OpenStack install, RDO]
 
 
 
-###安装RabbitMQ
+### 安装RabbitMQ
 	[root@controller ~]# yum install rabbitmq-server
 	[root@controller ~]# service rabbitmq-server start
 	Starting rabbitmq-server: SUCCESS
@@ -42,8 +42,8 @@ tags: [OpenStack install, RDO]
 
 
 
-###安装keystone
-####准备工作
+### 安装keystone
+#### 准备工作
 创建keystone数据库，并赋予权限：
 
 	mysql> create database keystone;
@@ -55,10 +55,10 @@ tags: [OpenStack install, RDO]
 	Query OK, 0 rows affected (0.00 sec)
 
 在redhat中，如果不加localhost这条授权，你用mysql client本地去连接的时候总是报错，比较奇怪，如果有知道原因的还请指教。
-####安装keystone软件包
+#### 安装keystone软件包
 	[root@controller ~]# yum -y install openstack-keystone
 
-####配置keystone
+#### 配置keystone
 在配置前需要导入keystone的环境变量，如下的方式导入
 	
 	export OS_SERVICE_TOKEN=99cloud
@@ -66,7 +66,7 @@ tags: [OpenStack install, RDO]
 
 	
 
-####启动服务
+#### 启动服务
 初始化数据库：
 
 	[root@controller keystone]# keystone-manage db_sync
@@ -81,11 +81,11 @@ tags: [OpenStack install, RDO]
 	[root@controller keystone]# chkconfig openstack-keystone on
 	
 
-####初始化数据
+#### 初始化数据
 
 
-###glance安装
-####准备工作
+### glance安装
+#### 准备工作
 准备glance的数据库，并给予相应用户访问权限：
 
 	mysql> create database glance;
@@ -98,15 +98,15 @@ tags: [OpenStack install, RDO]
 	Query OK, 0 rows affected (0.00 sec)
 
 
-####安装glance软件包
+#### 安装glance软件包
 	[root@controller ~]# yum install -y install openstack-glance
 
 
-###配置glance
+### 配置glance
 
 
 
-###重启服务
+### 重启服务
 
 	[root@controller ~]# /etc/init.d/openstack-glance-api restart
 	Stopping openstack-glance-api:                             [FAILED]
@@ -120,7 +120,7 @@ tags: [OpenStack install, RDO]
 	[root@controller glance]# chkconfig openstack-glance-registry on
 
 
-###上传一个测试镜像
+### 上传一个测试镜像
 	glance image-create --name=testimg --container-format=bare --disk-format=qcow2 --is-public=true < install.log
 
 
@@ -128,7 +128,7 @@ tags: [OpenStack install, RDO]
 
 
 
-##Neutron安装（VLAN模式）
+## Neutron安装（VLAN模式）
 
 	mysql> create database neutron;
 	Query OK, 1 row affected (0.00 sec)
@@ -200,8 +200,8 @@ tags: [OpenStack install, RDO]
 	ovs-vsctl add-br br-int
 	
 
-##RDO中的一些问题
-###RPM包下载
+## RDO中的一些问题
+### RPM包下载
 如果你用过RDO，其实你会发现一个问题，有时候就是一直失败，结果你重新执行packstack安装，又发现没有问题了。这个问题其实在安装RDO里面还是一个比较常见的问题，特别是你在安装多节点的时候。造成这个问题的原因估计大家都懂的，一部分原因是我们生活在天朝。那么如何解决这个问题，如果你把RDO相关的RPM包做成本地源，那这个问题出现的几率就要小很多。
 
 有如下的几种方式来解决这个问题：
@@ -224,13 +224,13 @@ tags: [OpenStack install, RDO]
 配置如上的参数即可，主要是你需要RPM的cache存放的目录和是否需要cache，默认yum是不cache RPM包的。
 
 
-####rpm list
+#### rpm list
 本list是CentOS min安装完成后，采用update更新后所需要的主RPM包，可以采用yumdownloader下载软件包和其依赖包：
     
     
     
     
-###RDO手动安装OpenStack报错
+### RDO手动安装OpenStack报错
 在采用RDO安装OpenStack的时候，导入RDO的源后，安装出现如下错误：
 
 	--> Finished Dependency Resolution
@@ -275,7 +275,7 @@ tags: [OpenStack install, RDO]
 
 
 
-###挂载镜像
+### 挂载镜像
 采用nbd挂载，需要加载nbd模块：
 
 	root@stack-X9DR3-F:~# grep NBD /boot/config-3.2.0-54-generic

@@ -3,7 +3,7 @@ layout: post
 title: "Keystone Performance简单测试和分析"
 description: "还在用keystone默认wgsi提供接入的同学，赶紧换apahce的wgsi吧。早先时候写过一篇关于keystone把token这块从数据库移植到memcached。当时一直比较忙，没有深入的去研究一些问题。今天早上刚好把Rally玩了一下，keystone的数据有点惨，顺便做了一些keystone相关的tunning。后面看样子还是有很多工作要做，OpenStack测试任重道远呀。"
 category: "OpenStack"
-tags: [Rally, Keystone, OpenStack Tesing]
+tags: [Rally, Keystone, OpenStack Testing]
 ---
 {% include JB/setup %}
 早先时候写过一篇关于keystone把token这块从数据库移植到memcached。当时一直比较忙，没有深入的去研究一些问题。今天早上刚好把R
